@@ -17,16 +17,19 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
 
-  <!-- Fonts -->
+  <!-- Fonts Preconnect & DNS Prefetch -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Preloads -->
-  <link rel="preload" as="image" href="images/hero_bg.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="images/hero_bg.webp" fetchpriority="high">
 
-  <!-- Styles -->
+  <!-- Styles & Deferred Scripts -->
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 
   <!-- Favicon placeholder -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🪵%3C/text%3E%3C/svg%3E">
@@ -42,7 +45,6 @@
   <header class="header" id="header">
     <div class="container header-inner">
       <a href="#inicio" class="logo" aria-label="Arteem Madeira - Página inicial">
-        <img src="images/logo.png" alt="Arteem Madeira" class="logo-img" width="400" height="166">
         <span class="logo-text">Arteem Madeira</span>
       </a>
 
@@ -73,7 +75,7 @@
          ======================================== -->
     <section class="hero" id="inicio">
       <div class="hero-bg">
-        <img src="images/hero_bg.jpg"
+        <img src="images/hero_bg.webp"
              alt="Mesa rústica de jantar em madeira maciça tronco vivo em sala de jantar aconchegante com iluminação quente"
              width="1600"
              height="950"
@@ -170,7 +172,7 @@
         <div class="gallery-grid">
           <!-- Mesas Cascatas -->
           <div class="gallery-item animate-on-scroll delay-1">
-            <img src="images/mesa_cascata.jpg"
+            <img src="images/mesa_cascata.webp"
                  alt="Mesa Cascata em madeira maciça com design exclusivo – Arteem Madeira"
                  width="800"
                  height="764"
@@ -182,7 +184,7 @@
           </div>
           <!-- Mesas Rústicas -->
           <div class="gallery-item animate-on-scroll delay-2">
-            <img src="images/mesa_rustica.jpg"
+            <img src="images/mesa_rustica.webp"
                  alt="Mesa Rústica em madeira maciça com detalhes únicos – Arteem Madeira"
                  width="800"
                  height="533"
@@ -194,7 +196,7 @@
           </div>
           <!-- Mesas e Cadeiras Desmontáveis -->
           <div class="gallery-item animate-on-scroll delay-3">
-            <img src="images/mesa_desmontavel.jpg"
+            <img src="images/mesa_desmontavel.webp"
                  alt="Mesa e cadeiras desmontáveis em madeira maciça – Arteem Madeira"
                  width="400"
                  height="400"
@@ -206,15 +208,15 @@
           </div>
           <!-- Fotos reais de clientes -->
           <div class="gallery-item animate-on-scroll delay-1">
-            <img src="images/cliente_sueli.jpg"
-                 alt="Mesa entregue pela Arteem Madeira – cliente satisfeita"
+            <img src="images/cliente_sueli.webp"
+                 alt="Mesa entregue pela Arteem Madeira – cliente satisita"
                  width="600"
                  height="450"
                  loading="lazy">
             <div class="gallery-caption">Mesa entregue – Cliente Sueli Souza</div>
           </div>
           <div class="gallery-item animate-on-scroll delay-2">
-            <img src="images/cliente_rose.jpg"
+            <img src="images/cliente_rose.webp"
                  alt="Mesa rústica entregue pela Arteem Madeira em varanda aconchegante"
                  width="539"
                  height="600"
@@ -222,7 +224,7 @@
             <div class="gallery-caption">Mesa entregue – Cliente Rose Lourenço</div>
           </div>
           <div class="gallery-item animate-on-scroll delay-3">
-            <img src="images/cliente_nilza.jpg"
+            <img src="images/cliente_nilza.webp"
                  alt="Mesa artesanal entregue pela Arteem Madeira – qualidade e beleza"
                  width="600"
                  height="450"
@@ -270,7 +272,7 @@
             </div>
           </div>
           <div class="sobre-image animate-on-scroll delay-2">
-            <img src="images/atelie.jpg"
+            <img src="images/atelie.webp"
                  alt="Ateliê da Arteem Madeira com marceneiro artesão trabalhando em bancada de madeira"
                  width="800"
                  height="600"
@@ -341,7 +343,7 @@
               <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78z"/></svg>
             </div>
             <div class="depoimento-photo">
-              <img src="images/cliente_sueli.jpg" alt="Mesa entregue para Sueli Souza" width="600" height="450" loading="lazy">
+              <img src="images/cliente_sueli.webp" alt="Mesa entregue para Sueli Souza" width="600" height="450" loading="lazy">
             </div>
             <p class="depoimento-text">"Adorei minha compra, minha mesa é linda e única, estou encantada com a excelente qualidade da loja."</p>
             <div class="depoimento-author">
@@ -362,7 +364,7 @@
               <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78z"/></svg>
             </div>
             <div class="depoimento-photo">
-              <img src="images/cliente_rose.jpg" alt="Mesa entregue para Rose Lourenço" width="539" height="600" loading="lazy">
+              <img src="images/cliente_rose.webp" alt="Mesa entregue para Rose Lourenço" width="539" height="600" loading="lazy">
             </div>
             <p class="depoimento-text">"Estou muito satisfeita com minha mesa, é de qualidade com um ótimo acabamento. Deixou minha varanda aconchegante e pronta para receber toda a família."</p>
             <div class="depoimento-author">
@@ -383,7 +385,7 @@
               <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1l2.39 4.84 5.34.78-3.87 3.77.91 5.32L10 13.27l-4.77 2.51.91-5.32L2.27 6.69l5.34-.78z"/></svg>
             </div>
             <div class="depoimento-photo">
-              <img src="images/cliente_nilza.jpg" alt="Mesa entregue para Nilza Andrade" width="600" height="450" loading="lazy">
+              <img src="images/cliente_nilza.webp" alt="Mesa entregue para Nilza Andrade" width="600" height="450" loading="lazy">
             </div>
             <p class="depoimento-text">"As mesas da Arte em Madeira são lindas e com preços acessíveis, fico impressionada com a qualidade e rapidez na entrega. É a segunda encomenda que faço, a qualidade que entregam é maravilhosa."</p>
             <div class="depoimento-author">
@@ -404,7 +406,7 @@
          ======================================== -->
     <section class="cta-final" id="contato">
       <div class="cta-final-bg">
-        <img src="images/contato_bg.jpg" alt="" width="1200" height="800" loading="lazy" aria-hidden="true">
+        <img src="images/contato_bg.webp" alt="" width="1200" height="800" loading="lazy" aria-hidden="true">
       </div>
       <div class="container">
         <div class="cta-final-content animate-on-scroll">
@@ -506,6 +508,5 @@
   </a>
 
   <!-- Script -->
-  <script src="script.js"></script>
 </body>
 </html>

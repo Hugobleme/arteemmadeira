@@ -659,6 +659,8 @@ p {
               radial-gradient(circle at 90% 80%, rgba(230, 126, 34, 0.04) 0%, transparent 60%);
   background-color: var(--color-secondary);
   padding: var(--space-2xl) 0;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }
 
 .diferenciais-grid {
@@ -736,6 +738,8 @@ p {
 .produtos {
   background-color: var(--color-white);
   padding: var(--space-2xl) 0;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1200px;
 }
 
 .gallery-grid {
@@ -795,6 +799,8 @@ p {
   background-color: var(--color-secondary);
   padding: var(--space-2xl) 0;
   position: relative;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }
 
 .sobre-grid {
@@ -884,6 +890,8 @@ p {
   padding: var(--space-2xl) 0;
   position: relative;
   overflow: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
 }
 
 .processo::before {
@@ -972,6 +980,8 @@ p {
 .depoimentos {
   background-color: var(--color-white);
   padding: var(--space-2xl) 0;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
 }
 
 .depoimentos-grid {
@@ -1098,6 +1108,8 @@ p {
   position: relative;
   padding: var(--space-3xl) 0;
   overflow: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
 }
 
 .cta-final-bg {
