@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Carousel mode for mobile
+    // Carousel mode for mobile (break out of container for edge-to-edge scroll with margins)
     grid.style.cssText = `
       display: flex;
       overflow-x: auto;
@@ -246,6 +246,11 @@ document.addEventListener('DOMContentLoaded', () => {
       padding-bottom: 1rem;
       scrollbar-width: none;
       -ms-overflow-style: none;
+      width: 100vw;
+      margin-left: -1.25rem;
+      margin-right: -1.25rem;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
     `;
 
     // Hide scrollbar
@@ -260,8 +265,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cards.forEach(card => {
       card.style.cssText = `
-        min-width: calc(100vw - 2.5rem);
-        scroll-snap-align: center;
+        width: calc(100vw - 3.5rem);
+        min-width: calc(100vw - 3.5rem);
+        max-width: calc(100vw - 3.5rem);
+        scroll-snap-align: start;
         flex-shrink: 0;
       `;
     });
@@ -276,9 +283,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (idx === 0) dot.classList.add('active');
         
         dot.addEventListener('click', () => {
-          const cardOffsetLeft = cards[idx].offsetLeft - grid.offsetLeft;
+          const cardWidth = cards[0].offsetWidth + 16; // width + gap (1rem = 16px)
           grid.scrollTo({
-            left: cardOffsetLeft,
+            left: idx * cardWidth,
             behavior: 'smooth'
           });
         });
