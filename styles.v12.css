@@ -12,8 +12,8 @@
   /* Colors */
   --color-primary: #1C1009;
   --color-primary-rgb: 28, 16, 9;
-  --color-secondary: #FCFAF5;
-  --color-secondary-dark: #FAF6EC;
+  --color-secondary: #110A06;
+  --color-secondary-dark: #160D07;
   --color-tertiary: #A85A32;
   --color-tertiary-light: #DFA67B;
   --color-accent: #E67E22;
@@ -21,10 +21,10 @@
   --color-whatsapp: #25D366;
   --color-whatsapp-hover: #1DA851;
   --color-white: #FFFFFF;
-  --color-text-dark: #1C1009;
-  --color-text-body: #3A2E26;
-  --color-text-light: #7A6658;
-  --color-overlay: rgba(28, 16, 9, 0.45);
+  --color-text-dark: #FCFAF5;
+  --color-text-body: rgba(252, 250, 245, 0.85);
+  --color-text-light: rgba(252, 250, 245, 0.65);
+  --color-overlay: rgba(28, 16, 9, 0.65);
 
   /* Typography */
   --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
@@ -159,7 +159,7 @@ section[id] {
    ============================================ */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
-  color: var(--color-primary);
+  color: var(--color-text-dark);
   line-height: 1.2;
   font-weight: 600;
 }
@@ -348,7 +348,7 @@ p {
 }
 
 .header.scrolled .logo-text {
-  color: var(--color-secondary);
+  color: var(--color-text-dark);
 }
 
 .header-inner {
@@ -369,7 +369,7 @@ p {
 .logo-icon svg {
   width: 36px;
   height: 36px;
-  fill: var(--color-primary);
+  fill: var(--color-text-dark);
   transition: fill var(--transition-base);
 }
 
@@ -377,7 +377,7 @@ p {
   font-family: var(--font-serif);
   font-size: 1.375rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-text-dark);
   letter-spacing: -0.01em;
   transition: color var(--transition-base);
 }
@@ -392,7 +392,7 @@ p {
 .nav-link {
   font-size: 0.9375rem;
   font-weight: 500;
-  color: var(--color-primary);
+  color: rgba(252, 250, 245, 0.85);
   position: relative;
   padding: 0.25rem 0;
   transition: color var(--transition-base);
@@ -437,7 +437,7 @@ p {
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--color-secondary);
+  background-color: var(--color-text-dark);
   transition: all var(--transition-base);
   border-radius: 1px;
 }
@@ -477,13 +477,14 @@ p {
   width: min(320px, 85vw);
   height: 100vh;
   height: 100dvh;
-  background: var(--color-secondary);
+  background: var(--color-secondary-dark);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
   padding: calc(var(--header-height) + 2rem) var(--space-lg) var(--space-lg);
   transition: right var(--transition-slow), visibility var(--transition-slow);
   visibility: hidden;
   z-index: 1000;
   overflow-y: auto;
-  box-shadow: -8px 0 40px rgba(28, 16, 9, 0.2);
+  box-shadow: -8px 0 40px rgba(0, 0, 0, 0.4);
 }
 
 .nav-drawer.active {
@@ -501,8 +502,8 @@ p {
   font-size: 1.25rem;
   padding: 1rem 0;
   width: 100%;
-  border-bottom: 1px solid rgba(160, 82, 45, 0.15);
-  color: var(--color-primary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(252, 250, 245, 0.85);
 }
 
 .nav-drawer .header-cta {
@@ -606,7 +607,7 @@ p {
   font-family: var(--font-serif);
   font-size: 1.375rem;
   font-weight: 700;
-  color: var(--color-secondary);
+  color: var(--color-text-dark);
   letter-spacing: -0.01em;
   transition: color var(--transition-base);
   display: block;
@@ -617,7 +618,7 @@ p {
   font-family: var(--font-serif);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-secondary);
+  color: var(--color-text-dark);
   letter-spacing: -0.01em;
 }
 
@@ -684,14 +685,14 @@ p {
 
 .diferencial-card {
   padding: var(--space-lg);
-  border: 1px solid rgba(122, 102, 88, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--border-radius-lg);
   transition: all var(--transition-base), transform var(--transition-spring);
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   position: relative;
-  box-shadow: 0 10px 30px rgba(28, 16, 9, 0.03);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .diferencial-card::before {
@@ -712,9 +713,9 @@ p {
 
 .diferencial-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 15px 35px rgba(28, 16, 9, 0.08);
-  border-color: rgba(230, 126, 34, 0.35);
-  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(230, 126, 34, 0.45);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .diferencial-icon {
@@ -736,7 +737,7 @@ p {
 
 .diferencial-card h3 {
   margin-bottom: var(--space-xs);
-  color: var(--color-primary);
+  color: var(--color-text-dark);
   font-size: 1.375rem;
 }
 
@@ -749,7 +750,7 @@ p {
    GALLERY / PRODUTOS
    ============================================ */
 .produtos {
-  background-color: var(--color-white);
+  background-color: var(--color-secondary-dark);
   padding: var(--space-2xl) 0;
   content-visibility: auto;
   contain-intrinsic-size: auto 1200px;
@@ -848,7 +849,7 @@ p {
   gap: var(--space-md);
   margin-top: var(--space-lg);
   padding-top: var(--space-lg);
-  border-top: 1px solid rgba(122, 102, 88, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .metric {
@@ -991,7 +992,7 @@ p {
    DEPOIMENTOS (Testimonials)
    ============================================ */
 .depoimentos {
-  background-color: var(--color-white);
+  background-color: var(--color-secondary-dark);
   padding: var(--space-2xl) 0;
   content-visibility: auto;
   contain-intrinsic-size: auto 600px;
@@ -1004,20 +1005,22 @@ p {
 }
 
 .depoimento-card {
-  background: #FAF6EC;
+  background: rgba(255, 255, 255, 0.03);
   border-radius: var(--border-radius-lg);
   padding: var(--space-lg);
   position: relative;
   transition: all var(--transition-base), transform var(--transition-spring);
-  border: 1px solid rgba(122, 102, 88, 0.1);
-  box-shadow: 0 10px 30px rgba(28, 16, 9, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .depoimento-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(28, 16, 9, 0.08);
-  border-color: rgba(230, 126, 34, 0.25);
-  background: #FFFFFF;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(230, 126, 34, 0.45);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 /* Testimonial Carousel Dots */
@@ -1104,7 +1107,7 @@ p {
 .depoimento-author-info strong {
   display: block;
   font-family: var(--font-serif);
-  color: var(--color-primary);
+  color: var(--color-text-dark);
   font-size: 1rem;
 }
 
@@ -1117,7 +1120,7 @@ p {
    FAQ (Perguntas Frequentes)
    ============================================ */
 .faq {
-  background-color: var(--color-secondary-dark);
+  background-color: var(--color-secondary);
   padding: var(--space-2xl) 0;
   content-visibility: auto;
   contain-intrinsic-size: auto 600px;
@@ -1132,22 +1135,26 @@ p {
 }
 
 .faq-item {
-  background: var(--color-white);
-  border: 1px solid rgba(122, 102, 88, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(28, 16, 9, 0.02);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   transition: all var(--transition-base);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .faq-item:hover {
-  border-color: rgba(230, 126, 34, 0.2);
-  box-shadow: 0 8px 24px rgba(28, 16, 9, 0.05);
+  border-color: rgba(230, 126, 34, 0.45);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
 .faq-item.active {
-  border-color: rgba(230, 126, 34, 0.35);
-  box-shadow: 0 10px 30px rgba(28, 16, 9, 0.06);
+  border-color: rgba(230, 126, 34, 0.45);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
 .faq-question {
@@ -1162,7 +1169,7 @@ p {
   font-family: var(--font-serif);
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: var(--color-text-dark);
   text-align: left;
   cursor: pointer;
   outline: none;
@@ -1284,7 +1291,7 @@ p {
 .footer-logo .logo-text,
 .footer-logo .footer-logo-text {
   display: block;
-  color: var(--color-secondary);
+  color: var(--color-text-dark);
   font-size: 1.5rem;
 }
 
@@ -1300,7 +1307,7 @@ p {
 }
 
 .footer h4 {
-  color: var(--color-secondary);
+  color: var(--color-text-dark);
   font-size: 1rem;
   font-family: var(--font-sans);
   font-weight: 600;
@@ -1409,8 +1416,9 @@ p {
   right: calc(100% + 12px);
   top: 50%;
   transform: translateY(-50%);
-  background: var(--color-white);
+  background: var(--color-secondary-dark);
   color: var(--color-text-dark);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
   font-size: 0.8125rem;
@@ -1429,7 +1437,7 @@ p {
   top: 50%;
   transform: translateY(-50%);
   border: 6px solid transparent;
-  border-left-color: var(--color-white);
+  border-left-color: var(--color-secondary-dark);
 }
 
 .whatsapp-float:hover .whatsapp-tooltip {
