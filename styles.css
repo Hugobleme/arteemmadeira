@@ -636,13 +636,19 @@ p {
 
 /* Testimonial product photos */
 .depoimento-photo {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%; /* 4:3 Aspect Ratio (Safari bugfix) */
   border-radius: var(--border-radius);
   overflow: hidden;
   margin-bottom: var(--space-sm);
-  aspect-ratio: 4/3;
 }
 
 .depoimento-photo img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
