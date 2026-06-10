@@ -413,6 +413,40 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ============================================
+  // FAQ ACCORDION
+  // ============================================
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+    
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all other items for a clean single-open accordion feel
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          const otherAnswer = otherItem.querySelector('.faq-answer');
+          otherAnswer.style.maxHeight = null;
+          otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        }
+      });
+      
+      // Toggle active class and expand/collapse answer container
+      item.classList.toggle('active');
+      
+      if (isActive) {
+        answer.style.maxHeight = null;
+        question.setAttribute('aria-expanded', 'false');
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  // ============================================
   // INITIAL STATE
   // ============================================
   // IntersectionObservers handle initial state detection automatically on setup

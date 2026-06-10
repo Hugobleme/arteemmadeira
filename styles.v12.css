@@ -1114,6 +1114,92 @@ p {
 }
 
 /* ============================================
+   FAQ (Perguntas Frequentes)
+   ============================================ */
+.faq {
+  background-color: var(--color-secondary-dark);
+  padding: var(--space-2xl) 0;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
+.faq-grid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: var(--color-white);
+  border: 1px solid rgba(122, 102, 88, 0.1);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(28, 16, 9, 0.02);
+  transition: all var(--transition-base);
+}
+
+.faq-item:hover {
+  border-color: rgba(230, 126, 34, 0.2);
+  box-shadow: 0 8px 24px rgba(28, 16, 9, 0.05);
+}
+
+.faq-item.active {
+  border-color: rgba(230, 126, 34, 0.35);
+  box-shadow: 0 10px 30px rgba(28, 16, 9, 0.06);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: none;
+  border: none;
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  transition: color var(--transition-fast);
+}
+
+.faq-question:hover {
+  color: var(--color-accent);
+}
+
+.faq-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--color-accent);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.faq-answer-inner {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  color: var(--color-text-body);
+  line-height: 1.75;
+  font-size: 0.9375rem;
+}
+
+/* ============================================
    CTA FINAL
    ============================================ */
 .cta-final {
