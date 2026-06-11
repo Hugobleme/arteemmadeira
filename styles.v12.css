@@ -1482,6 +1482,14 @@ p {
    MOBILE-SPECIFIC: Gallery captions always visible
    ============================================ */
 @media (max-width: 767px) {
+  .hero-bg img {
+    object-position: center 65%;
+  }
+
+  .hero-content {
+    margin-top: 50px;
+  }
+
   .gallery-caption {
     transform: translateY(0);
     position: relative;
