@@ -1,5 +1,5 @@
 /* ============================================
-   ARTEEM MADEIRA — Main Script
+   ARTE EM MADEIRA — Main Script
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
