@@ -1547,6 +1547,10 @@ p {
     aspect-ratio: 16/9;
   }
 
+  .gallery-item:last-child {
+    grid-column: 1 / -1;
+  }
+
   .sobre-grid {
     grid-template-columns: 1.4fr 1fr;
   }
@@ -1654,6 +1658,10 @@ p {
 
   .gallery-item:nth-child(3) {
     aspect-ratio: 4/3;
+  }
+
+  .gallery-item:last-child {
+    grid-column: span 2;
   }
 
   .processo-grid {
